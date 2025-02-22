@@ -1,5 +1,3 @@
-import './style.css';
-
 function initializeGenie() {
   const wishButton = document.getElementById('grantWishButton');
   const wishInput = document.getElementById('wishInput');
