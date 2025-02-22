@@ -1,30 +1,43 @@
 function initializeGenie() {
-  const wishButton = document.getElementById('grantWishButton');
-  const wishInput = document.getElementById('wishInput');
+  const tabButtons = document.querySelectorAll('.tab-btn');
   
-  if (wishButton && wishInput) {
-    wishButton.addEventListener('click', () => {
-      handleWish(wishInput.value);
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Get the tab to show
+      const tabToShow = button.getAttribute('data-tab');
+      switchTab(tabToShow);
     });
+  });
+}
 
-    // Also handle Enter key
-    wishInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        handleWish(wishInput.value);
-      }
-    });
+function switchTab(tabId) {
+  // Get all tabs and buttons
+  const allTabs = document.querySelectorAll('.tab-content');
+  const allButtons = document.querySelectorAll('.tab-btn');
+  
+  // Hide all tabs and deactivate all buttons
+  allTabs.forEach(tab => {
+    tab.classList.remove('active');
+    tab.style.display = 'none';
+  });
+  allButtons.forEach(btn => btn.classList.remove('active'));
+  
+  // Show selected tab and activate its button
+  const selectedTab = document.getElementById(tabId);
+  const selectedButton = document.querySelector(`[data-tab="${tabId}"]`);
+  
+  if (selectedTab && selectedButton) {
+    selectedTab.style.display = 'block';
+    setTimeout(() => {
+      selectedTab.classList.add('active');
+    }, 50);
+    selectedButton.classList.add('active');
   }
 }
 
-function handleWish(wish) {
-  if (!wish.trim()) {
-    alert('Please make a wish first!');
-    return;
-  }
-  
-  // Here you can add the main functionality of your Genie app
-  console.log('Processing wish:', wish);
-  alert(`Your wish "${wish}" has been heard! ✨`);
-}
-
-document.addEventListener('DOMContentLoaded', initializeGenie);
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  initializeGenie();
+  // Show dashboard by default
+  switchTab('dashboard');
+});
