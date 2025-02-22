@@ -13,7 +13,7 @@
   <div id="app">
     <div class="header">
       <h1>Genie</h1>
-      <p>Tracking since <span id="time-installed"></span></p>
+      <p>Tracking since Janurary 9, 2025 <span id="time-installed"></span></p>
       <nav class="tab-nav">
         <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
         <button class="tab-btn" data-tab="discounts">Discounts</button>
@@ -23,22 +23,37 @@
 
     <div class="tab-container">
       <!-- Only one of these will be shown at a time -->
-      <div id="dashboard" class="tab-content active">
-        <h2>Types of Queries</h2>
+      <div id="dashboard" class="tab-content active" >
+      <div class="queries">
+        <h2 class="Queries-header">Types of Queries</h2>
         <div class="dashboard-stats">
           <div id="bar" style="width:500px;height:250px;"></div>
-          <div class="stat-card">
-            <h3>Energy Usage</h3>
-            <p>75 kWh</p>
-          </div>
-          <button class="see-all-activity" type="button"> See All Activity             ></button>
-          <div class="stat-card">
-            <h3>Cost Savings</h3>
-            <p>$24.50</p>
-          </div>
-
+          <div class="solid-divider">
+            <div class="line"></div>
+            </div>
+          <button class="see-all-activity" type="button"> See All Activity                                ></button>
         </div>
       </div>
+      <p class="update-time" style="padding-bottom:20px">Updated todat at 2:30 PM</p>
+    <!-- First Stats Row: Energy Usage -->
+    <div class="stats-container">
+      <img src="./src/assets/genie.png" alt="Genie Logo" class="genie-logo">
+      <div class="stat-card">
+        <h3>Energy Usage</h3>
+        <p>75 kWh</p>
+      </div>
+    </div>
+
+    <!-- Second Stats Row: Cost Savings -->
+    <div class="stats-container">
+      <img src="./src/assets/genie.png" alt="Genie Logo" class="genie-logo">
+      <div class="stat-card">
+        <h3>Cost Savings</h3>
+        <p>$24.50</p>
+      </div>
+    </div>
+  </div>
+</div>
 
       <div id="discounts" class="tab-content">
         <h2>Available Discounts</h2>
