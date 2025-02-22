@@ -3,7 +3,7 @@ let currentInput = ""
 
 const classify_prompt = (currentInput) => {
     code_keywords = ["write code", "code", "implement", "function", "debug", "API", "script", "Python", "JavaScript", "C++", "React", "algorithm"]
-    math_keywords = ["solve", "equation", "integral", "derivative", "theorem", "proof", "matrix", "vector", "probability", "statistic"]
+    math_keywords = ["solve", "math", "equation", "integral", "derivative", "theorem", "proof", "matrix", "vector", "probability", "statistic"]
     image_keywords = ["generate image", "image", "create picture", "visualize", "draw", "render", "photo", "graph", "chart"]
 
     let prompt = currentInput.toLowerCase()
