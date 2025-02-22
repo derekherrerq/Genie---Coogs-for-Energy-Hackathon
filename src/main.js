@@ -36,6 +36,15 @@ function initializeGenie() {
         color: colors
       }
     }]);
+
+    const total_emission = 0.00012 * y[0] + 0.00012* y[1] + 0.00013  * y[2] + 0.00014 * y[3];
+    const total_energy = 0.0008 * y[0] + 0.0008 * y[1] + 0.0009 * y[2] + 0.001 * y[3];
+
+    console.log(total_emission);
+    console.log(total_energy);
+
+    document.querySelector('#power-usage').textContent = total_energy;
+    document.querySelector('#emissions').textContent = total_emission;
   });
 
 }
