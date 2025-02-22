@@ -9,6 +9,7 @@
   <div id="app">
     <div class="header">
       <h1>Genie</h1>
+      <p>Tracking since <span id="time-installed"></span></p>
       <nav class="tab-nav">
         <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
         <button class="tab-btn" data-tab="discounts">Discounts</button>
@@ -21,6 +22,7 @@
       <div id="dashboard" class="tab-content active">
         <h2>Dashboard</h2>
         <div class="dashboard-stats">
+          <div id="bar" style="width:600px;height:250px;"></div>
           <div class="stat-card">
             <h3>Energy Usage</h3>
             <p>75 kWh</p>
@@ -53,6 +55,7 @@
       </div>
     </div>
   </div>
+  <script src="/src/plotly.js" charset="utf-8"></script>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

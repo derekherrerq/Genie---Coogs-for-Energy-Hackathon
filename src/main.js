@@ -1,6 +1,13 @@
+
 function initializeGenie() {
   const tabButtons = document.querySelectorAll('.tab-btn');
   
+  const timeInstalled = document.getElementById('time-installed');
+
+  chrome.storage.local.get('trackingSince', (result) => {
+    timeInstalled.textContent = result.trackingSince;
+  });
+
   tabButtons.forEach(button => {
     button.addEventListener('click', () => {
       // Get the tab to show
@@ -8,7 +15,32 @@ function initializeGenie() {
       switchTab(tabToShow);
     });
   });
+
+  const labels = ['Code', 'Math', 'Image', 'Other'];
+  const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f'];
+
+  
+  chrome.storage.local.get(['codeQueries', 'mathQueries', 'imageQueries', 'otherQueries'], (result) => {
+    const y = [0, 0, 0, 0];
+    y[0] = result.codeQueries;
+    y[1] = result.mathQueries;
+    y[2] = result.imageQueries;
+    y[3] = result.otherQueries;
+
+    const barPlot = document.getElementById('bar');
+    Plotly.newPlot(barPlot, [{
+      x: labels,
+      y: y,
+      type: 'bar',
+      marker: {
+        color: colors
+      }
+    }]);
+  });
+
 }
+
+
 
 function switchTab(tabId) {
   // Get all tabs and buttons
