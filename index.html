@@ -25,27 +25,41 @@
     </div>
 
     <div class="tab-container">
-      <!-- Only one of these will be shown at a time -->
       <div id="dashboard" class="tab-content active">
-        <h2>Types of Queries</h2>
-        <div class="dashboard-stats">
-          <div id="bar" style="width:500px;height:250px;"></div>
-          <div class="stat-card">
-            <h3>Energy Usage</h3>
-            <p><span id="power-usage">0</span> kWh</p>
+        <div class="queries">
+          <h2 class="Queries-header">Types of Queries</h2>
+          <div class="dashboard-stats">
+            <div id="bar" style="width:500px;height:250px;"></div>
+            <div class="stats-container">
+              <img src="./src/assets/genie.png" alt="Genie Logo" class="genie-logo">
+              <div class="stat-card">
+                <h3>Energy Usage</h3>
+                <p><span id="power-usage">0</span> kWh</p>
+              </div>
+            </div>
+            <div class="stats-container">
+              <img src="./src/assets/genie.png" alt="Genie Logo" class="genie-logo">
+              <div class="stat-card">
+                <h3>Emissions</h3>
+                <p><span id="emissions">0</span> kgCO2e/kWh</p>
+              </div>
+            </div>
+            <div class="stats-container">
+              <img src="./src/assets/genie.png" alt="Genie Logo" class="genie-logo">
+              <div class="stat-card">
+                <h3>Cost Savings</h3>
+                <p>$<span id="saving">0</span></p>
+              </div>
+            </div>
           </div>
-          <div class="stat-card">
-            <h3>Emissions</h3>
-            <p id="power-usage"><span id="emissions">0</span> kgCO2e/kWh</p>
-          </div>
-          <button class="see-all-activity" type="button"> See All Activity             ></button>
-          <div class="stat-card">
-            <h3>Cost Savings</h3>
-            <p>$<span id="saving">0</span></p>
-          </div>
-
         </div>
+        <div class="solid-divider">
+          <div class="line"></div>
+        </div>
+        <button class="see-all-activity" type="button">See All Activity ></button>
+        <p class="update-time">Updated today at 2:30 PM</p>
       </div>
+    </div>
 
       <div id="discounts" class="tab-content">
         <h2>Available Discounts</h2>
@@ -74,15 +88,39 @@
         </div>
        </div>
 
-      <div id="recs" class="tab-content">
+       <div id="recs" class="tab-content">
         <h2>Recommendations</h2>
         <div class="rec-list">
           <div class="rec-card">
-            <h3>Energy Saving Tips</h3>
-            <p>Switch to LED lighting</p>
+            <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
+            <div class="tip-content">
+              <div class="tip-header">
+                <span class="tip-label">Tip</span>
+              </div>
+              <p>Switch to LED lighting to reduce energy consumption</p>
+            </div>
+          </div>
+          <div class="rec-card">
+            <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
+            <div class="tip-content">
+              <div class="tip-header">
+                <span class="tip-label">Tip</span>
+              </div>
+              <p>Use shorter prompts to reduce token usage</p>
+            </div>
+          </div>
+          <div class="rec-card">
+            <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
+            <div class="tip-content">
+              <div class="tip-header">
+                <span class="tip-label">Tip</span>
+              </div>
+              <p>Try using Claude instead of GPT-4 for better efficiency</p>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   <script src="/src/plotly.js" charset="utf-8"></script>
