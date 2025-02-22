@@ -20,7 +20,7 @@ function initializeGenie() {
   const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f'];
 
   
-  chrome.storage.local.get(['codeQueries', 'mathQueries', 'imageQueries', 'otherQueries'], (result) => {
+  chrome.storage.local.get(['codeQueries', 'mathQueries', 'imageQueries', 'otherQueries', "lowCarbonQueries"], (result) => {
     const y = [0, 0, 0, 0];
     y[0] = result.codeQueries;
     y[1] = result.mathQueries;
@@ -40,13 +40,13 @@ function initializeGenie() {
     const total_emission = 0.00012 * y[0] + 0.00012* y[1] + 0.00013  * y[2] + 0.00014 * y[3];
     const total_energy = 0.0008 * y[0] + 0.0008 * y[1] + 0.0009 * y[2] + 0.001 * y[3];
 
-    console.log(total_emission);
-    console.log(total_energy);
+    const cost = total_energy / 0.1485;
+    const saved = (result.lowCarbonQueries * 0.00012) * (0.1485 - 0.0866);
 
     document.querySelector('#power-usage').textContent = total_energy;
     document.querySelector('#emissions').textContent = total_emission;
+    document.querySelector('#saving').textContent = saved;
   });
-
 }
 
 

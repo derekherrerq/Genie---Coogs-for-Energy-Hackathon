@@ -26,6 +26,9 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.local.set({ otherQueries: 0 }, () => {
         console.log("Storage initialized!");
     });
+    chrome.storage.local.set({ lowCarbonQueries: 0 }, () => {
+        console.log("Storage initialized!");
+    });
     chrome.storage.local.set({ trackingSince: formatDate() }, () => {
         console.log("Tracking started!");
     });
@@ -49,10 +52,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                 bin = "otherQueries";
         } 
         
-        chrome.storage.local.get([bin], (result) => {
+        chrome.storage.local.get([bin, "lowCarbonQueries"], (result) => {
             let currentInput = message.content;
             let numberOfQueries = result[bin];
             numberOfQueries++;
+
+            const time = new Date();
+            const hours = time.getHours();
+
+
+            if (hours >= 21 || hours <= 9) {
+                const lowCarbonQueries = result.lowCarbonQueries;
+                chrome.storage.local.set({ lowCarbonQueries: lowCarbonQueries + 1 }, () => {
+                    console.log("Low carbon queries updated!", lowCarbonQueries + 1);
+                });
+            }
 
             switch(bin) {
                 case "codeQueries":
