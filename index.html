@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Genie</title>
   <link rel="stylesheet" href="/src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="app">
@@ -21,17 +24,19 @@
     <div class="tab-container">
       <!-- Only one of these will be shown at a time -->
       <div id="dashboard" class="tab-content active">
-        <h2>Dashboard</h2>
+        <h2>Types of Queries</h2>
         <div class="dashboard-stats">
           <div id="bar" style="width:500px;height:250px;"></div>
           <div class="stat-card">
             <h3>Energy Usage</h3>
             <p>75 kWh</p>
           </div>
+          <button class="see-all-activity" type="button"> See All Activity             ></button>
           <div class="stat-card">
             <h3>Cost Savings</h3>
             <p>$24.50</p>
           </div>
+
         </div>
       </div>
 
