@@ -2,7 +2,7 @@ import './style.css';
 
 function initializeGenie() {
   const wishButton = document.getElementById('grantWishButton');
-  const wishInput = document.getElementById('wishInput') as HTMLInputElement;
+  const wishInput = document.getElementById('wishInput');
   
   if (wishButton && wishInput) {
     wishButton.addEventListener('click', () => {
@@ -18,7 +18,7 @@ function initializeGenie() {
   }
 }
 
-function handleWish(wish: string) {
+function handleWish(wish) {
   if (!wish.trim()) {
     alert('Please make a wish first!');
     return;
