@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Genie",
+    "version": "1.0.0",
+    "description": "Genie - Your Wish is Our Command",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

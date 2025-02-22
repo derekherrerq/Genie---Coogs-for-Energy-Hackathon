@@ -1,0 +1,72 @@
+body {
+    width: 350px;
+    padding: 20px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #2c3e50;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .wish-input {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .wish-input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  .wish-button {
+    padding: 12px;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .wish-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+  
+  .wish-button:active {
+    transform: translateY(1px);
+  }  

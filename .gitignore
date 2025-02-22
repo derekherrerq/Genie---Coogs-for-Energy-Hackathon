@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Production build
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Development environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Browser Extension packaging
+*.zip
+*.crx
+*.pem
+*.nex
+
+# Logs
+logs/
+*.log
+
+# Coverage directory used by testing tools
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
