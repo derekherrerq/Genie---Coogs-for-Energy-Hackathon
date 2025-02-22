@@ -27,7 +27,7 @@
     <div class="tab-container">
       <div id="dashboard" class="tab-content active">
         <div class="queries">
-          <h2 class="Queries-header">Types of Queries</h2>
+          <h2 class="Queries-header" style="margin-top:-10px">Types of Queries</h2>
           <div class="dashboard-stats">
             <div id="bar" style="width:500px;height:250px;"></div>
             <div class="stats-container">
@@ -53,16 +53,14 @@
             </div>
           </div>
         </div>
-        <div class="solid-divider">
-          <div class="line"></div>
-        </div>
         <button class="see-all-activity" type="button">See All Activity ></button>
         <p class="update-time">Updated today at 2:30 PM</p>
       </div>
     </div>
 
+    <div class="tab-container">
       <div id="discounts" class="tab-content">
-        <h2>Available Discounts</h2>
+        <h2 style="margin-top:-40px">Available Discounts</h2>
         <div class="discount-list">
           <div class="discount-card">
             <div class="discount-card-content">
@@ -87,40 +85,43 @@
           </div>
         </div>
        </div>
+      </div>
 
-       <div id="recs" class="tab-content">
-        <h2>Recommendations</h2>
-        <div class="rec-list">
-          <div class="rec-card">
-            <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
-            <div class="tip-content">
-              <div class="tip-header">
-                <span class="tip-label">Tip</span>
+      <div class="tab-container">
+        <div id="recs" class="tab-content">
+          <h2 style="margin-top:-80px">Recommendations</h2>
+          <div class="rec-list">
+            <div class="rec-card">
+              <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
+              <div class="tip-content">
+                <div class="tip-header">
+                  <span class="tip-label">Tip</span>
+                </div>
+                <p>Switch to LED lighting to reduce energy consumption</p>
               </div>
-              <p>Switch to LED lighting to reduce energy consumption</p>
             </div>
-          </div>
-          <div class="rec-card">
-            <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
-            <div class="tip-content">
-              <div class="tip-header">
-                <span class="tip-label">Tip</span>
+            <div class="rec-card">
+              <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
+              <div class="tip-content">
+                <div class="tip-header">
+                  <span class="tip-label">Tip</span>
+                </div>
+                <p>Use shorter prompts to reduce token usage</p>
               </div>
-              <p>Use shorter prompts to reduce token usage</p>
             </div>
-          </div>
-          <div class="rec-card">
-            <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
-            <div class="tip-content">
-              <div class="tip-header">
-                <span class="tip-label">Tip</span>
+            <div class="rec-card">
+              <img src="./src/assets/genie.png" alt="Genie" class="genie-icon">
+              <div class="tip-content">
+                <div class="tip-header">
+                  <span class="tip-label">Tip</span>
+                </div>
+                <p>Try using Claude instead of GPT-4 for better efficiency</p>
               </div>
-              <p>Try using Claude instead of GPT-4 for better efficiency</p>
             </div>
           </div>
         </div>
       </div>
-
+    
     </div>
   </div>
   <script src="/src/plotly.js" charset="utf-8"></script>
