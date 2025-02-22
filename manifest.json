@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Genie",
     "version": "1.0.0",
-    "description": "Genie - Tracking Carbon Emissions of Gen AI",
+    "description": "Genie - Tracking Carbon Emissions for Gen AI",
     "action": {
       "default_popup": "index.html",
       "default_icon": {
