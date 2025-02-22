@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Genie",
     "version": "1.0.0",
-    "description": "Genie - Your Wish is Our Command",
+    "description": "Genie - Tracking Carbon Emissions of Gen AI",
     "action": {
       "default_popup": "index.html",
       "default_icon": {
